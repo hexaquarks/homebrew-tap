@@ -1,4 +1,3 @@
-# Generated from the release candidate; the first release refreshes this formula.
 class Texo < Formula
   desc "A terminal workspace for LaTeX resumes with PDF preview and AI assistance"
   homepage "https://github.com/hexaquarks/texo"
@@ -6,21 +5,21 @@ class Texo < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/hexaquarks/texo/releases/download/v0.1.0/texo-aarch64-apple-darwin.tar.gz"
-      sha256 "e2f02de533b2c6c04fe52f10d556ff11fa1b5ec0412df9fa88dee66042e24fb9"
+      sha256 "da978f60aa49f435bbb8f642887129628d7fb0eaab3dd06e1ad4b4b87d03ff05"
     end
     if Hardware::CPU.intel?
       url "https://github.com/hexaquarks/texo/releases/download/v0.1.0/texo-x86_64-apple-darwin.tar.gz"
-      sha256 "32811a8551c5abcecf0ca672748ec0457cd6d8a7dea2bc0feb402f0fa84242d5"
+      sha256 "2ae9e4e469b76633a9aa8921a7598c83c604f6daf8f128bba185466588a67d21"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/hexaquarks/texo/releases/download/v0.1.0/texo-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "30c03e302ea7722842de74660866490ab062910d9994bef5f7cd0fdea9545394"
+      sha256 "7102e6f67141891ce6f7720f84333cbe1c58030be452ce695037339db716bbdf"
     end
     if Hardware::CPU.intel?
       url "https://github.com/hexaquarks/texo/releases/download/v0.1.0/texo-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "8933aa911d74f61f98ed106ea9c31ad9b1142efbde2cd5fbdd0a516f1aa10613"
+      sha256 "18cc2be9a0c02fa4e3d97c0aa46ce76f7a00debd3674b32c68c72f1262bb48ee"
     end
   end
   license "MIT"
@@ -28,11 +27,11 @@ class Texo < Formula
   depends_on "tectonic"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin": {},
+    "aarch64-apple-darwin":      {},
     "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin": {},
-    "x86_64-unknown-linux-gnu": {}
-  }
+    "x86_64-apple-darwin":       {},
+    "x86_64-unknown-linux-gnu":  {},
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
