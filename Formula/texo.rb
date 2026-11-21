@@ -1,25 +1,25 @@
 class Texo < Formula
   desc "A terminal workspace for LaTeX resumes with PDF preview and AI assistance"
   homepage "https://github.com/hexaquarks/texo"
-  version "0.2.0"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/hexaquarks/texo/releases/download/v0.2.0/texo-aarch64-apple-darwin.tar.gz"
-      sha256 "f5dcb1332a3e6e789ab10b766d9362e7989cc7773b9adfed08a1d01a8c587471"
+      url "https://github.com/hexaquarks/texo/releases/download/v0.3.0/texo-aarch64-apple-darwin.tar.gz"
+      sha256 "751d6491da1ac80a1942b7f88dc06da1737284843b1e5534bf97f1765cc49b01"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hexaquarks/texo/releases/download/v0.2.0/texo-x86_64-apple-darwin.tar.gz"
-      sha256 "bf15bc70887618b80937564e428663534406768c1c4624a9edfd6aaa345ccdce"
+      url "https://github.com/hexaquarks/texo/releases/download/v0.3.0/texo-x86_64-apple-darwin.tar.gz"
+      sha256 "cede96907d6bb0774116987aa89ac30cad0615fd1bdab4fb50bd68cb8011fcaa"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/hexaquarks/texo/releases/download/v0.2.0/texo-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "78566fe93878433fdc019387fd25a184e4735b8d4aede8b662d866ccfcdc75b7"
+      url "https://github.com/hexaquarks/texo/releases/download/v0.3.0/texo-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "83854cf3a3524a3254c38bb94b617cafd9b9ee8887a148d07e70762a27ef4cf6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hexaquarks/texo/releases/download/v0.2.0/texo-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "1bbe785a31edc7674d1e1576d23bc005b29acd7b38238ede0391bf80d8123ac4"
+      url "https://github.com/hexaquarks/texo/releases/download/v0.3.0/texo-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "83a050b2ec2392a1e33daf155a4b56c91c63567c621e1e8ffcc94c4cb4da1d60"
     end
   end
   license "MIT"
